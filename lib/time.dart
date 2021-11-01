@@ -20,7 +20,9 @@ class _TimePageState extends State<TimePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(),
+              style: ElevatedButton.styleFrom(
+                  onPrimary: Colors.yellowAccent,
+                  textStyle: TextStyle(fontSize: 20)),
               onPressed: () {
                 _getTime(context);
               },
@@ -30,7 +32,7 @@ class _TimePageState extends State<TimePage> {
               height: 25,
             ),
             Text(
-              'Date value : ' + _selectedTime.format(context),
+              'Time value : ' + _selectedTime.format(context),
               style: TextStyle(color: Colors.redAccent),
             ),
           ],

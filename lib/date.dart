@@ -15,7 +15,7 @@ class _DatePageState extends State<DatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.deepOrangeAccent,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -23,9 +23,8 @@ class _DatePageState extends State<DatePage> {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-              onPrimary: Colors.orangeAccent,
-            ),
+                onPrimary: Colors.yellowAccent,
+                textStyle: TextStyle(fontSize: 20)),
             onPressed: () {
               _getDate(context);
             },
@@ -35,8 +34,8 @@ class _DatePageState extends State<DatePage> {
             height: 25,
           ),
           Text(
-            'Data value : ' + _dateFormat.format(_selectedDate),
-            style: TextStyle(color: Colors.redAccent),
+            'Date Now : ' + _dateFormat.format(_selectedDate),
+            style: TextStyle(color: Colors.blue),
           )
         ],
       )),
